@@ -24,7 +24,8 @@ const DonationForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('/api/submit-donation', formData);
+            console.log(formData);
+            await axios.post('http://localhost:4000/api/submit-donation', formData);
             window.location.href = '/thank-you'; // Redirect to thank you page
         } catch (error) {
             console.error('Error submitting the form', error);

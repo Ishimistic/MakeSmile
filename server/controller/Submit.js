@@ -2,6 +2,7 @@ import Donation from '../model/Donation.js';
 import SendEmail from '../SendEmail.js';
 
 export const Submit = async (req, res) => {
+    console.log("recvd ")
     const { fullName, mobileNumber, email, donationItem, handoverDate, message } = req.body;
 
     try {
